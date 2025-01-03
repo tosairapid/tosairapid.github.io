@@ -3,8 +3,8 @@ let config = {};
 
 // JSONファイルを読み込む
 Promise.all([
-  fetch("../json/stations.json").then(response => response.json()),
-  fetch("../json/config.json").then(response => response.json())
+  fetch("json/stations.json").then(response => response.json()),
+  fetch("json/config.json").then(response => response.json())
 ])
   .then(([stationsData, configData]) => {
     stations = stationsData;
