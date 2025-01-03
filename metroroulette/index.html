@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB2GT0YK96"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RB2GT0YK96');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroRoulette</title> 
+    <meta name="description" content="東京メトロの各駅を内容としたルーレットです。ルーレット旅などにお使い下さい。">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="img-center">
+      <img src="images/title.webp" alt="MetroRoulette" id="title-image">
+    </div>
+    <noscript>
+      <div class="form">
+        <p>当サイトではJavaScriptを使用しています。<br>ブラウザの設定でJavaScriptの使用を無効にしている場合、このサイトは動作いたしません。<br>当サイトをご覧の際はJavaScriptの使用を有効にしてください。</p>
+      </div>
+    </noscript>
+    <div id="main" style="display:none;">
+      <div class="form">
+        <button type="button" onclick="drawLottery()">押す</button>
+        <h1 id="result">-</h1>
+        <div id="img"></div>
+        <div id="info"></div>
+        <p id="time"></p>
+      </div>
+      <p><a href="#" onclick="Modal();">利用規約・プライバシーポリシー</a></p>
+    </div>
+    <div id="modal" style="display:none;">
+      <div class="form">
+        <p>このサービスをご利用いただくには、利用規約およびプライバシーポリシーへの同意が必要です。</p>
+      </div>
+      <div id="modal-content">
+        <p>利用規約を読み込み中...</p> <!-- ローディングメッセージ -->
+      </div>
+      <div class="form">
+        <p>この利用規約及びプライバシーポリシーはいつでも下部の利用規約・プライバシーポリシーから確認することが出来ます。</p>
+        <button id="closeM" type="button" onclick="closeModal()">同意する</button>
+      </div>
+    </div>
+    <p id="version"></p>
+    <p><a href="https://x.com/tanasan_o38">o38</a></p>
+    <script src="terms.js"></script>
+    <script src="Lottery.js"></script>
+</body>
+</html>
