@@ -1,0 +1,931 @@
+[
+    {
+        "name": "青山一丁目\n",
+        "numbers": [
+            "g04",
+            "z03",
+            "e24"
+        ]
+    },
+    {
+        "name": "赤坂\n",
+        "numbers": [
+            "c06"
+        ]
+    },
+    {
+        "name": "赤坂見附\n",
+        "numbers": [
+            "g05",
+            "m13"
+        ]
+    },
+    {
+        "name": "赤羽岩淵\n",
+        "numbers": [
+            "n19"
+        ]
+    },
+    {
+        "name": "秋葉原\n",
+        "numbers": [
+            "h16"
+        ]
+    },
+    {
+        "name": "浅草\n",
+        "numbers": [
+            "g19",
+            "a18"
+        ]
+    },
+    {
+        "name": "麻布十番\n",
+        "numbers": [
+            "n04",
+            "e22"
+        ]
+    },
+    {
+        "name": "綾瀬\n",
+        "numbers": [
+            "c19"
+        ]
+    },
+    {
+        "name": "淡路町\n",
+        "numbers": [
+            "m19"
+        ]
+    },
+    {
+        "name": "飯田橋\n",
+        "numbers": [
+            "n10",
+            "t06",
+            "y13",
+            "e06"
+        ]
+    },
+    {
+        "name": "池袋\n",
+        "numbers": [
+            "f09",
+            "m25",
+            "y09"
+        ]
+    },
+    {
+        "name": "市ケ谷\n",
+        "numbers": [
+            "n09",
+            "y14",
+            "s04"
+        ]
+    },
+    {
+        "name": "稲荷町\n",
+        "numbers": [
+            "g17"
+        ]
+    },
+    {
+        "name": "入谷\n",
+        "numbers": [
+            "h19"
+        ]
+    },
+    {
+        "name": "上野\n",
+        "numbers": [
+            "g16",
+            "h18"
+        ]
+    },
+    {
+        "name": "上野広小路\n",
+        "numbers": [
+            "g15"
+        ]
+    },
+    {
+        "name": "浦安\n",
+        "numbers": [
+            "t18"
+        ]
+    },
+    {
+        "name": "江戸川橋\n",
+        "numbers": [
+            "y13"
+        ]
+    },
+    {
+        "name": "恵比寿\n",
+        "numbers": [
+            "h02"
+        ]
+    },
+    {
+        "name": "王子\n",
+        "numbers": [
+            "n16"
+        ]
+    },
+    {
+        "name": "王子神谷\n",
+        "numbers": [
+            "n17"
+        ]
+    },
+    {
+        "name": "大手町\n",
+        "numbers": [
+            "c11",
+            "m18",
+            "t09",
+            "z08",
+            "i09"
+        ]
+    },
+    {
+        "name": "荻窪\n",
+        "numbers": [
+            "m01"
+        ]
+    },
+    {
+        "name": "押上〈スカイツリー前〉\n",
+        "numbers": [
+            "z14",
+            "a20"
+        ]
+    },
+    {
+        "name": "落合\n",
+        "numbers": [
+            "t02"
+        ]
+    },
+    {
+        "name": "御茶ノ水\n",
+        "numbers": [
+            "m20"
+        ]
+    },
+    {
+        "name": "表参道\n",
+        "numbers": [
+            "c04",
+            "g02",
+            "z02"
+        ]
+    },
+    {
+        "name": "神楽坂\n",
+        "numbers": [
+            "t05"
+        ]
+    },
+    {
+        "name": "葛西\n",
+        "numbers": [
+            "t17"
+        ]
+    },
+    {
+        "name": "霞ケ関\n",
+        "numbers": [
+            "c08",
+            "h07",
+            "m15"
+        ]
+    },
+    {
+        "name": "要町\n",
+        "numbers": [
+            "f08",
+            "y08"
+        ]
+    },
+    {
+        "name": "神谷町\n",
+        "numbers": [
+            "h05"
+        ]
+    },
+    {
+        "name": "茅場町\n",
+        "numbers": [
+            "h13"
+        ]
+    },
+    {
+        "name": "神田\n",
+        "numbers": [
+            "g13"
+        ]
+    },
+    {
+        "name": "外苑前\n",
+        "numbers": [
+            "g03"
+        ]
+    },
+    {
+        "name": "北綾瀬\n",
+        "numbers": [
+            "c20"
+        ]
+    },
+    {
+        "name": "北参道\n",
+        "numbers": [
+            "f14"
+        ]
+    },
+    {
+        "name": "北千住\n",
+        "numbers": [
+            "c18",
+            "h22"
+        ]
+    },
+    {
+        "name": "木場\n",
+        "numbers": [
+            "t13"
+        ]
+    },
+    {
+        "name": "京橋\n",
+        "numbers": [
+            "g10"
+        ]
+    },
+    {
+        "name": "清澄白河\n",
+        "numbers": [
+            "z11",
+            "e14"
+        ]
+    },
+    {
+        "name": "錦糸町\n",
+        "numbers": [
+            "z13"
+        ]
+    },
+    {
+        "name": "行徳\n",
+        "numbers": [
+            "t20"
+        ]
+    },
+    {
+        "name": "銀座\n",
+        "numbers": [
+            "g09",
+            "h09",
+            "m16"
+        ]
+    },
+    {
+        "name": "銀座一丁目\n",
+        "numbers": [
+            "y19"
+        ]
+    },
+    {
+        "name": "九段下\n",
+        "numbers": [
+            "t07",
+            "z06",
+            "s05"
+        ]
+    },
+    {
+        "name": "麴町\n",
+        "numbers": [
+            "y15"
+        ]
+    },
+    {
+        "name": "後楽園\n",
+        "numbers": [
+            "m22",
+            "n11"
+        ]
+    },
+    {
+        "name": "小竹向原\n",
+        "numbers": [
+            "f06",
+            "y06"
+        ]
+    },
+    {
+        "name": "国会議事堂前\n",
+        "numbers": [
+            "c07",
+            "m14"
+        ]
+    },
+    {
+        "name": "小伝馬町\n",
+        "numbers": [
+            "h15"
+        ]
+    },
+    {
+        "name": "駒込\n",
+        "numbers": [
+            "n14"
+        ]
+    },
+    {
+        "name": "護国寺\n",
+        "numbers": [
+            "y11"
+        ]
+    },
+    {
+        "name": "桜田門\n",
+        "numbers": [
+            "y17"
+        ]
+    },
+    {
+        "name": "渋谷\n",
+        "numbers": [
+            "f16",
+            "g01",
+            "z01"
+        ]
+    },
+    {
+        "name": "志茂\n",
+        "numbers": [
+            "n16"
+        ]
+    },
+    {
+        "name": "白金高輪\n",
+        "numbers": [
+            "n03",
+            "i03"
+        ]
+    },
+    {
+        "name": "白金台\n",
+        "numbers": [
+            "n02",
+            "i02"
+        ]
+    },
+    {
+        "name": "新大塚\n",
+        "numbers": [
+            "m24"
+        ]
+    },
+    {
+        "name": "新御茶ノ水\n",
+        "numbers": [
+            "c12"
+        ]
+    },
+    {
+        "name": "新木場\n",
+        "numbers": [
+            "y24"
+        ]
+    },
+    {
+        "name": "新高円寺\n",
+        "numbers": [
+            "m03"
+        ]
+    },
+    {
+        "name": "新宿\n",
+        "numbers": [
+            "m08",
+            "s01",
+            "e27"
+        ]
+    },
+    {
+        "name": "新宿御苑前\n",
+        "numbers": [
+            "m10"
+        ]
+    },
+    {
+        "name": "新宿三丁目\n",
+        "numbers": [
+            "f13",
+            "m09",
+            "s02"
+        ]
+    },
+    {
+        "name": "新富町\n",
+        "numbers": [
+            "y20"
+        ]
+    },
+    {
+        "name": "新中野\n",
+        "numbers": [
+            "m05"
+        ]
+    },
+    {
+        "name": "新橋\n",
+        "numbers": [
+            "g08",
+            "a10"
+        ]
+    },
+    {
+        "name": "神保町\n",
+        "numbers": [
+            "z07",
+            "s06",
+            "i10"
+        ]
+    },
+    {
+        "name": "水天宮前\n",
+        "numbers": [
+            "z10"
+        ]
+    },
+    {
+        "name": "末広町\n",
+        "numbers": [
+            "g14"
+        ]
+    },
+    {
+        "name": "住吉\n",
+        "numbers": [
+            "z12",
+            "s13"
+        ]
+    },
+    {
+        "name": "千川\n",
+        "numbers": [
+            "f07",
+            "y07"
+        ]
+    },
+    {
+        "name": "千駄木\n",
+        "numbers": [
+            "c15"
+        ]
+    },
+    {
+        "name": "雑司が谷\n",
+        "numbers": [
+            "f10"
+        ]
+    },
+    {
+        "name": "高田馬場\n",
+        "numbers": [
+            "t03"
+        ]
+    },
+    {
+        "name": "竹橋\n",
+        "numbers": [
+            "t08"
+        ]
+    },
+    {
+        "name": "辰巳\n",
+        "numbers": [
+            "y23"
+        ]
+    },
+    {
+        "name": "溜池山王\n",
+        "numbers": [
+            "g06",
+            "n06"
+        ]
+    },
+    {
+        "name": "田原町\n",
+        "numbers": [
+            "g18"
+        ]
+    },
+    {
+        "name": "地下鉄赤塚\n",
+        "numbers": [
+            "f03",
+            "y03"
+        ]
+    },
+    {
+        "name": "地下鉄成増\n",
+        "numbers": [
+            "f02",
+            "y02"
+        ]
+    },
+    {
+        "name": "月島\n",
+        "numbers": [
+            "y21"
+        ]
+    },
+    {
+        "name": "築地\n",
+        "numbers": [
+            "h11"
+        ]
+    },
+    {
+        "name": "東京\n",
+        "numbers": [
+            "m17"
+        ]
+    },
+    {
+        "name": "東大前\n",
+        "numbers": [
+            "n12"
+        ]
+    },
+    {
+        "name": "東陽町\n",
+        "numbers": [
+            "t14"
+        ]
+    },
+    {
+        "name": "豊洲\n",
+        "numbers": [
+            "y22"
+        ]
+    },
+    {
+        "name": "虎ノ門\n",
+        "numbers": [
+            "g07"
+        ]
+    },
+    {
+        "name": "虎ノ門ヒルズ\n",
+        "numbers": [
+            "h06"
+        ]
+    },
+    {
+        "name": "仲御徒町\n",
+        "numbers": [
+            "h17"
+        ]
+    },
+    {
+        "name": "中野\n",
+        "numbers": [
+            "t01"
+        ]
+    },
+    {
+        "name": "中野坂上\n",
+        "numbers": [
+            "m06",
+            "e30"
+        ]
+    },
+    {
+        "name": "中野新橋\n",
+        "numbers": [
+            "mb05"
+        ]
+    },
+    {
+        "name": "中野富士見町\n",
+        "numbers": [
+            "mb04"
+        ]
+    },
+    {
+        "name": "中目黒\n",
+        "numbers": [
+            "h01"
+        ]
+    },
+    {
+        "name": "永田町\n",
+        "numbers": [
+            "n07",
+            "y16",
+            "z04"
+        ]
+    },
+    {
+        "name": "西葛西\n",
+        "numbers": [
+            "t16"
+        ]
+    },
+    {
+        "name": "西ケ原\n",
+        "numbers": [
+            "n15"
+        ]
+    },
+    {
+        "name": "西新宿\n",
+        "numbers": [
+            "m07"
+        ]
+    },
+    {
+        "name": "西日暮里\n",
+        "numbers": [
+            "c16"
+        ]
+    },
+    {
+        "name": "西船橋\n",
+        "numbers": [
+            "t23"
+        ]
+    },
+    {
+        "name": "西早稲田\n",
+        "numbers": [
+            "f11"
+        ]
+    },
+    {
+        "name": "二重橋前〈丸の内〉\n",
+        "numbers": [
+            "c10"
+        ]
+    },
+    {
+        "name": "日本橋\n",
+        "numbers": [
+            "g11",
+            "t10",
+            "a13"
+        ]
+    },
+    {
+        "name": "人形町\n",
+        "numbers": [
+            "h14",
+            "a14"
+        ]
+    },
+    {
+        "name": "根津\n",
+        "numbers": [
+            "c14"
+        ]
+    },
+    {
+        "name": "乃木坂\n",
+        "numbers": [
+            "c05"
+        ]
+    },
+    {
+        "name": "八丁堀\n",
+        "numbers": [
+            "h12"
+        ]
+    },
+    {
+        "name": "半蔵門\n",
+        "numbers": [
+            "z05"
+        ]
+    },
+    {
+        "name": "原木中山\n",
+        "numbers": [
+            "t22"
+        ]
+    },
+    {
+        "name": "氷川台\n",
+        "numbers": [
+            "f05",
+            "y05"
+        ]
+    },
+    {
+        "name": "東池袋\n",
+        "numbers": [
+            "y10"
+        ]
+    },
+    {
+        "name": "東銀座\n",
+        "numbers": [
+            "h10",
+            "a11"
+        ]
+    },
+    {
+        "name": "東高円寺\n",
+        "numbers": [
+            "m04"
+        ]
+    },
+    {
+        "name": "東新宿\n",
+        "numbers": [
+            "f12",
+            "e12"
+        ]
+    },
+    {
+        "name": "日比谷\n",
+        "numbers": [
+            "c09",
+            "h08",
+            "i08"
+        ]
+    },
+    {
+        "name": "広尾\n",
+        "numbers": [
+            "h03"
+        ]
+    },
+    {
+        "name": "平和台\n",
+        "numbers": [
+            "f04",
+            "y04"
+        ]
+    },
+    {
+        "name": "方南町\n",
+        "numbers": [
+            "mb03"
+        ]
+    },
+    {
+        "name": "本駒込\n",
+        "numbers": [
+            "n13"
+        ]
+    },
+    {
+        "name": "本郷三丁目\n",
+        "numbers": [
+            "m21",
+            "e08"
+        ]
+    },
+    {
+        "name": "町屋\n",
+        "numbers": [
+            "c17"
+        ]
+    },
+    {
+        "name": "三越前\n",
+        "numbers": [
+            "g12",
+            "z09"
+        ]
+    },
+    {
+        "name": "南阿佐ケ谷\n",
+        "numbers": [
+            "m02"
+        ]
+    },
+    {
+        "name": "南行徳\n",
+        "numbers": [
+            "t19"
+        ]
+    },
+    {
+        "name": "南砂町\n",
+        "numbers": [
+            "t15"
+        ]
+    },
+    {
+        "name": "南千住\n",
+        "numbers": [
+            "h21"
+        ]
+    },
+    {
+        "name": "三ノ輪\n",
+        "numbers": [
+            "h20"
+        ]
+    },
+    {
+        "name": "茗荷谷\n",
+        "numbers": [
+            "m23"
+        ]
+    },
+    {
+        "name": "妙典\n",
+        "numbers": [
+            "t21"
+        ]
+    },
+    {
+        "name": "明治神宮前〈原宿〉\n",
+        "numbers": [
+            "c02",
+            "f15"
+        ]
+    },
+    {
+        "name": "目黒\n",
+        "numbers": [
+            "n01"
+        ]
+    },
+    {
+        "name": "門前仲町\n",
+        "numbers": [
+            "t12"
+        ]
+    },
+    {
+        "name": "有楽町\n",
+        "numbers": [
+            "y18"
+        ]
+    },
+    {
+        "name": "湯島\n",
+        "numbers": [
+            "c13"
+        ]
+    },
+    {
+        "name": "四ツ谷\n",
+        "numbers": [
+            "m12",
+            "n08"
+        ]
+    },
+    {
+        "name": "四谷三丁目\n",
+        "numbers": [
+            "m11"
+        ]
+    },
+    {
+        "name": "代々木上原\n",
+        "numbers": [
+            "c01"
+        ]
+    },
+    {
+        "name": "代々木公園\n",
+        "numbers": [
+            "c02"
+        ]
+    },
+    {
+        "name": "六本木\n",
+        "numbers": [
+            "h04",
+            "e23"
+        ]
+    },
+    {
+        "name": "六本木一丁目\n",
+        "numbers": [
+            "n05"
+        ]
+    },
+    {
+        "name": "和光市\n",
+        "numbers": [
+            "f01"
+        ]
+    },
+    {
+        "name": "早稲田\n",
+        "numbers": [
+            "t04"
+        ]
+    }
+]
