@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misskey非公式テーマメーカー</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Misskey非公式テーマメーカー</h1>
+
+<form name="MTE">
+  <!-- 入力フォーム -->
+  <label><input type="radio" name="base" value="light" checked> ライト</label>
+  <label><input type="radio" name="base" value="dark"> ダーク</label>
+  <br>
+  <label>テーマ名 <input type="text" id="name"></label>
+  <label>背景色 <input type="color" id="bg" value="#ffffff"></label>
+  <label>文字色 <input type="color" id="fg" value="#ffffff"></label>
+  <label>リンクの色 <input type="color" id="link" value="#ffffff"></label>
+  <label>UI左メニュー背景 <input type="color" id="navBg" value="#ffffff"></label>
+  <label>微妙に異なる色 <input type="color" id="panel" value="#ffffff"></label>
+  <label>アクセント色 <input type="color" id="accent" value="#ffffff"></label>
+  <label>スマホモード下部色 <input type="color" id="header" value="#ffffff"></label>
+  <label>リノートの色 <input type="color" id="renote" value="#ffffff"></label>
+  <label>ハッシュタグ色 <input type="color" id="hashtag" value="#ffffff"></label>
+  <label>メンション色 <input type="color" id="mention" value="#ffffff"></label>
+  <label>入力ボーダー色 <input type="color" id="inputBorder" value="#ffffff"></label>
+  <label>ユーザー名 <input type="text" id="author"></label>
+
+  <!-- 完了ボタン -->
+  <button type="button" id="btn">完了</button>
+
+  <!-- コード表示エリア -->
+  <div class="output-area">
+    <label for="code">生成されたコード:</label>
+    <textarea id="code" readonly></textarea>
+    
+    <div class="button-group">
+      <button type="button" id="copyBtn">コードをコピー</button>
+      <button type="button" id="shareBtn">Misskeyにシェア</button>
+    </div>
+  </div>
+</form>
+<p>ver.2024/12/2２−06:30・<a href="https://misskey.flowers/@minumarapid">おーみや</a></p>
+
+<script>
+  // ランダムなIDを生成する関数
+  function generateRandomId() {
+    return Array.from({ length: 20 }, () => Math.random().toString(36).charAt(2)).join('');
+  }
+
+  // 完了ボタン処理
+  document.getElementById("btn").addEventListener("click", function() {
+    let mte = document.forms.MTE;
+    let code = `{
+base: '${mte.base.value}',
+name: '${mte.name.value}',
+props: {
+  bg: '${mte.bg.value}',
+  fg: '${mte.fg.value}',
+  link: '${mte.link.value}',
+  navBg: '${mte.navBg.value}',
+  panel: '${mte.panel.value}',
+  accent: '${mte.accent.value}',
+  header: '${mte.header.value}',
+  renote: '${mte.renote.value}',
+  hashtag: '${mte.hashtag.value}',
+  mention: '${mte.mention.value}',
+  inputBorder: '${mte.inputBorder.value}'
+  },
+author: '${mte.author.value}',
+id: '${generateRandomId()}'
+}`;
+
+    // テキストエリアにコードを表示
+    document.getElementById("code").value = code;
+  });
+
+  // コードコピー処理
+  document.getElementById("copyBtn").addEventListener("click", function() {
+    let code = document.getElementById("code");
+    code.select();
+    document.execCommand("copy");
+    alert("コードをコピーしました！");
+  });
+
+  // Misskey共有処理
+  document.getElementById("shareBtn").addEventListener("click", function() {
+    let code = document.getElementById("code").value;
+    let shareText = `\`\`\`\n${code}\n\`\`\`\n[Misskey非公式テーマメーカー](https://tanasan2363.github.io/mtm/)でMisskeyテーマを作成しました！`;
+    let shareUrl = `https://misskey-hub.net/share/?text=${encodeURIComponent(shareText)}&visibility=home&localOnly=0`;
+
+    // 新しいタブで共有URLを開く
+    window.open(shareUrl, "_blank");
+  });
+</script>
+</body>
+</html>
