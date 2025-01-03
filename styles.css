@@ -266,6 +266,7 @@ li:last-child {
     --form-border-color: #666;
     --button-bg-color: #00A3D9;
     --button-hover-color: #00467E;
+    --textarea-bg-color: #555;
     --input-bg-color: #555;
     --input-text-color: #fff;
   }
