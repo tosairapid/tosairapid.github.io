@@ -1,0 +1,303 @@
+@font-face {
+  font-family: 'LINESeedJP_OTF_Rg';
+  src: url('https://minumarapid.github.io/MetroRoulette/fonts/LINESeedJP_OTF_Rg.woff2') format('woff2'),
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 基本のカスタム変数 */
+:root {
+  --primary-bg-color: #fafafa;
+  --primary-text-color: #333;
+  --form-bg-color: #fff;
+  --form-border-color: #ddd;
+  --button-bg-color: #00467E;
+  --button-hover-color: #00A3D9;
+  --textarea-bg-color: #f4f4f4;
+  --input-bg-color: #fff;
+  --input-text-color: #333;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --base-font-size: 16px; /* デフォルトフォントサイズ */
+  --font-family: 'LINESeedJP_OTF_Rg', sans-serif;
+}
+
+/* 基本のスタイル */
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; /* 太字を無効化 */
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 2rem; /* デフォルトの2倍 */
+}
+
+h2 {
+  font-size: 1.8rem; /* デフォルトの2倍 */
+}
+
+h3 {
+  font-size: 1.6rem; /* デフォルトの2倍 */
+}
+
+h4 {
+  font-size: 1.4rem; /* デフォルトの2倍 */
+}
+
+h5 {
+  font-size: 1.2rem; /* デフォルトの2倍 */
+}
+
+a {
+  color: var(--button-bg-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#result {
+  margin-bottom: 0px; /* 下の余白を少なくして、画像との間隔を縮める */
+}
+
+#img {
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  gap: 5px; /* 画像間の余白 */
+  margin-top: 0px; /* 上の余白を追加して、infoとの間隔を空ける */
+  margin-bottom: 20px; /* 下の余白を追加して、imgとの間隔を空ける */
+}
+
+#img img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+#info {
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  gap: 10px; /* ボタン間の余白 */
+  margin-top: 20px; /* 上の余白 */
+  margin-bottom: 20px; /* 下の余白を追加して、imgとの間隔を空ける */
+}
+
+#info button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+form, #form, .form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--form-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+input[type="text"], input[type="color"], input[type="email"], input[type="password"], textarea, button, select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+}
+
+input[type="color"] {
+  height: 40px;
+}
+
+textarea {
+  height: 200px;
+  font-family: monospace;
+  background-color: var(--textarea-bg-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+select {
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  border: 1px solid var(--form-border-color);
+}
+
+.output-area {
+  margin-top: 20px;
+}
+
+.output-area label {
+  margin-bottom: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button-group button {
+  width: auto;
+  flex: 1;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  color: var(--primary-text-color);
+  margin: 20px 0;
+}
+
+/* テーブル要素 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+td, th {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid var(--form-border-color);
+}
+
+th {
+  background-color: var(--input-bg-color);
+  font-weight: bold;
+  color: var(--primary-text-color);
+}
+
+td {
+  background-color: var(--form-bg-color);
+  color: var(--primary-text-color);
+}
+
+/* 改良されたリスト要素 */
+ul, ol {
+  padding-left: 5px; /* 左端から20pxのスペース */
+  margin: 10px 0;
+  list-style-position: outside; /* マーカーをリスト外に配置 */
+}
+
+ul li, ol li {
+  display: flex;
+  justify-content: flex-start; /* 左揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  margin-bottom: 8px;
+  line-height: 1.6;
+  text-align: left; /* テキストを左揃え */
+}
+
+ul li::before, ol li::before {
+  content: "•"; /* デフォルトのリストマーカー */
+  margin-right: 10px;
+  color: var(--button-bg-color); /* 色をカスタマイズ */
+  font-size: 20px; /* サイズを調整 */
+  display: inline-block; /* マーカーをテキストの横に配置 */
+}
+
+ol {
+  list-style-type: decimal; /* 番号付きリスト */
+  padding-left: 25px; /* 番号付きリストの左端を調整 */
+}
+
+ol li::before {
+  content: none; /* 番号付きリストではマーカーを非表示に */
+}
+
+li {
+  padding-left: 10px; /* マーカーとテキストの間隔 */
+}
+
+li:last-child {
+  margin-bottom: 0; /* 最後のアイテムの下の余白を削除 */
+}
+
+.img-center {
+    text-align: center;
+}
+
+#title-image {
+    width: 75vw;
+    max-width: 500px;
+    height: auto;
+}
+
+/* ブラウザのダークモードに自動的に追従 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-bg-color: #333;
+    --primary-text-color: #fff;
+    --form-bg-color: #444;
+    --form-border-color: #666;
+    --button-bg-color: #00A3D9;
+    --button-hover-color: #00467E;
+    --input-bg-color: #555;
+    --input-text-color: #fff;
+  }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) { 
+  :root {
+    --base-font-size: 14px;
+  }
+  
+  form, #form, .form {
+    padding: 15px;
+  }
+
+  input[type="text"], input[type="color"], input[type="email"], input[type="password"], button, select {
+    padding: 8px;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  td, th {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  :root {
+    --base-font-size: 16px;
+  }
+}
