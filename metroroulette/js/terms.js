@@ -51,7 +51,7 @@ function getCookie(name) {
 }
 
 function loadTerms() {
-  fetch('../html/terms.html')
+  fetch('html/terms.html')
   .then(response => {
     if (!response.ok) {
       throw new Error('利用規約の読み込みに失敗しました');
