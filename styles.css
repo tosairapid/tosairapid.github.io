@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'LINESeedJP_OTF_Rg';
-  src: url('https://minumarapid.github.io/MetroRoulette/fonts/LINESeedJP_OTF_Rg.woff2') format('woff2'),
+  src: url('/fonts/LINESeedJP_OTF_Rg.woff2') format('woff2'),
   font-weight: normal;
   font-style: normal;
   font-display: swap;
