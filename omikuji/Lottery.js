@@ -3,7 +3,7 @@ let config = {};
 
 // JSONファイルを読み込む
 Promise.all([
-  fetch("json/omokuji.json").then(response => response.json()),
+  fetch("omokuji.json").then(response => response.json()),
 ])
   .then(([omikujiData]) => {
     omijuji = omikujiData;
