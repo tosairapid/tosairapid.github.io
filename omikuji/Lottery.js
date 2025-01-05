@@ -25,9 +25,14 @@ function drawLottery() {
   const randomIndex = Math.floor(Math.random() * omikuji.length);
   const result = omikuji[randomIndex];
 
+  // `setsumei`をランダムに選ぶ
+  const setsumeiArray = result.setsumei || ["説明がありません"];
+  const randomSetsumeiIndex = Math.floor(Math.random() * setsumeiArray.length);
+  const randomSetsumei = setsumeiArray[randomSetsumeiIndex];
+
   // 結果を表示
   document.getElementById("result").innerText = result.name || "名前がありません";
-  document.getElementById("resultp").innerText = result.setsumei || "説明がありません";
+  document.getElementById("resultp").innerText = randomSetsumei;
 
   // 抽選時間を表示
   document.getElementById("time").innerText = new Date();
