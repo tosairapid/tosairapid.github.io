@@ -1,13 +1,20 @@
-let stations = [];
+let omikuji = [];
 
 // JSONファイルを読み込む
-Promise.all([
-  fetch("omokuji.json").then(response => response.json()),
-])
-  .then(([omikujiData]) => {
-    omijuji = omikujiData;
+fetch("omikuji.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
   })
-  .catch(error => console.error("Error loading data:", error));
+  .then(data => {
+    omikuji = data;
+  })
+  .catch(error => {
+    console.error("Error loading data:", error);
+    alert("データの読み込みに失敗しました。");
+  });
 
 function drawLottery() {
   if (omikuji.length === 0) {
@@ -15,13 +22,13 @@ function drawLottery() {
     return;
   }
 
-  const randomIndex = Math.floor(Math.random() * stations.length);
-  const result = omijuji[randomIndex];
+  const randomIndex = Math.floor(Math.random() * omikuji.length);
+  const result = omikuji[randomIndex];
 
   // 結果を表示
-  document.getElementById("result").innerText = result.name;
-  document.getElementById("resultp").innerText = result.setsumei;
+  document.getElementById("result").innerText = result.name || "名前がありません";
+  document.getElementById("resultp").innerText = result.setsumei || "説明がありません";
 
   // 抽選時間を表示
-  document.getElementById("time").innerText = new Date()
+  document.getElementById("time").innerText = new Date();
 }
