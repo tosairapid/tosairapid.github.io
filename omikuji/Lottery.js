@@ -1,5 +1,4 @@
 let stations = [];
-let config = {};
 
 // JSONファイルを読み込む
 Promise.all([
