@@ -60,6 +60,10 @@ h5 {
   font-size: 1.2rem; /* デフォルトの2倍 */
 }
 
+#gasinfo {
+  font-size: 0.6rem;
+}
+
 a {
   color: var(--button-bg-color);
   text-decoration: none;
