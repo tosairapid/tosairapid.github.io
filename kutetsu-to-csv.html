@@ -26,6 +26,7 @@
     <div id="data">データがここに表示されます。</div>
 
     <script>
+        // ボタンのクリックイベントを登録
         document.getElementById("fetchButton").addEventListener("click", function() {
             const mapno = document.getElementById("mapno").value; // ユーザー入力のmapnoを取得
 
@@ -34,12 +35,17 @@
                 return;
             }
 
-            // URLに入力されたmapnoを埋め込む
-            const url = `https://ku-tetsu.net/_Ajax.php/?exec=selectIndex&mapno=${mapno}`;
+            // GETリクエストのURLを生成
+            const url = `https://ku-tetsu.net/_Ajax.php/?exec=selectIndex&mapno=${encodeURIComponent(mapno)}`;
 
-            // GETリクエストを送信
+            // Fetch APIを使用してGETリクエストを送信
             fetch(url)
-                .then(response => response.json()) // レスポンスをJSON形式に変換
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTPエラー: ${response.status}`);
+                    }
+                    return response.json(); // レスポンスをJSON形式に変換
+                })
                 .then(data => {
                     // 取得したデータをHTMLに表示
                     document.getElementById("data").innerHTML = `
@@ -48,7 +54,11 @@
                     `;
                 })
                 .catch(error => {
-                    document.getElementById("data").innerHTML = "データの取得に失敗しました。";
+                    // エラーハンドリング
+                    document.getElementById("data").innerHTML = `
+                        <p style="color: red;">データの取得に失敗しました。</p>
+                        <p>エラー詳細: ${error.message}</p>
+                    `;
                     console.error("Error:", error);
                 });
         });
