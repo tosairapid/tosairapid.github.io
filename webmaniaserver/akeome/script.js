@@ -5,6 +5,12 @@ const csvUrl = "https://docs.google.com/spreadsheets/u/0/d/1bf61OOjuj1DX9yfb79eo
 let scatterChart, pieChart;
 let filteredData = []; // フィルタリングしたデータを格納する変数
 
+// URLパラメータから参加者を取得
+function getUserFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('user') || ''; // 'user' パラメータを取得
+}
+
 // CSVをロードしてテーブルとセレクトボックスを作成
 async function loadCSV() {
     const output = document.getElementById('output');
@@ -54,8 +60,15 @@ async function loadCSV() {
             select.appendChild(option);
         });
 
-        // 初期状態で散布図と円グラフを更新
-        filterTableAndPlot();
+        // URLパラメータがある場合は、選択された参加者を反映
+        const selectedUser = getUserFromURL();
+        if (selectedUser) {
+            select.value = selectedUser;
+            filterTableAndPlot();
+        } else {
+            filterTableAndPlot(); // 初期状態でフィルタリングを適用
+        }
+
     } catch (error) {
         output.textContent = `エラー: ${error.message}`;
     }
@@ -63,7 +76,7 @@ async function loadCSV() {
 
 // フィルタリングと散布図、円グラフ作成
 function filterTableAndPlot() {
-    const selectedParticipant = document.getElementById('participantSelect').value.toLowerCase();
+    const selectedUser = document.getElementById('participantSelect').value.toLowerCase();
     const table = document.getElementById('csvTable');
     const rows = table.getElementsByTagName('tr');
     const data = []; // 散布図データ用
@@ -75,7 +88,7 @@ function filterTableAndPlot() {
         const participant = cells[1]?.textContent.toLowerCase(); // 2列目（インデックス1）を参加者と仮定
         const rank = parseFloat(cells[2]?.textContent); // 3列目（インデックス2）を順位と仮定
 
-        if (!selectedParticipant || participant === selectedParticipant) {
+        if (!selectedUser || participant === selectedUser) {
             rows[i].style.display = ''; // 該当行を表示
 
             if (!isNaN(rank)) {
@@ -91,7 +104,7 @@ function filterTableAndPlot() {
     }
 
     // 「すべて表示」が選ばれていない場合にのみ散布図を表示
-    if (selectedParticipant !== "") {
+    if (selectedUser !== "") {
         updateScatterChart(data);
         updatePieChart(rankCounts);
     } else {
