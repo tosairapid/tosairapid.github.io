@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- ここから -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB2GT0YK96"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RB2GT0YK96');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.ico">
+    <!-- ここまでテンプレ -->
+    <title>Ku-tetsu to CSV</title> 
+    <meta name="description" content="空想鉄道のWebページからCSVファイルを直接ダウンロードできるブックマークレットの配布ページです。">
+    <meta name="robots"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1>Ku-tetsu to CSV<br>配布ページ</h1>
+    <noscript>
+      <div class="form">
+        <p>当サイトではJavaScriptを使用しています。<br>ブラウザの設定でJavaScriptの使用を無効にしている場合、このサイトは正常に動作しない可能性があります。<br>当サイトをご覧の際はJavaScriptの使用を有効にしてください。</p>
+      </div>
+    </noscript>
+    <div class="form">
+      <h2>ブックマークレット本体</h2>
+      <p><a href="javascript:(function() { const allowedDomains = [&quot;ku-tetsu.net&quot;, &quot;old.ku-tetsu.net&quot;, &quot;road.chi-zu.net&quot;, &quot;any.chi-zu.net&quot;, &quot;annex.chi-zu.net&quot;]; if (!allowedDomains.includes(location.hostname)) { alert(&quot;このスクリプトは指定されたドメインでのみ使用できます&quot;); return; } let mainurl = location.origin; let path = location.pathname; let mapnoMatch = path.match(/\/([A-Za-z0-9]+)\.html$/); if (!mapnoMatch) { alert(&quot;mapnoが取得できません&quot;); return; } let mapno = mapnoMatch[1]; let apiUrl = `${mainurl}/_Ajax.php/?exec=selectIndex&amp;mapno=${mapno}`; fetch(apiUrl).then(response =&gt; response.json()).then(data =&gt; { if (data.result !== &quot;success&quot;) { alert(&quot;APIリクエストが失敗しました&quot;); return; } let lines = data.mapdata ? JSON.parse(data.mapdata).line : []; let mapName = data.mapinfo.name; let csvData = &quot;路線名,駅名,駅番号\n&quot;; lines.forEach(line =&gt; { let lineName = line.name; let lineMark = line.mark; let stationIndex = 1; line.point.forEach(station =&gt; { let stationName = station[3]; if (stationName) { let stationNumber = lineMark + String(stationIndex).padStart(2, '0'); csvData += `${lineName},${stationName},${stationNumber}\n`; stationIndex++; } }); }); let filename = `${mapName}(${mainurl.replace(/^https?:\/\//, '')}_${mapno}).csv`; let blob = new Blob([csvData], { type: &quot;text/csv&quot; }); let a = document.createElement(&quot;a&quot;); a.href = URL.createObjectURL(blob); a.download = filename; document.body.appendChild(a); a.click(); document.body.removeChild(a); }).catch(error =&gt; alert(&quot;エラー: &quot; + error)); })();">Ku-tetsu to CSV本体</a></p>
+      <h2>使い方</h2>
+      <p>ブックマークレット登録して空想鉄道の作品ページで実行してください。<br>詳しくは<a href="https://www.google.com/search?q=ブックマークレット">ブックマークレット｜検索</a></p>
+    </div>
+    <p><a href="https://x.com/tanasan_o38">o38</a></p>
+    <p id="gasinfo">このサイトではGoogleAnalyticsを使用しております。</p>
+  </body>
+</html>
