@@ -17,7 +17,8 @@
     <link rel="icon" href="/images/favicon.ico">
     <!-- ここまでテンプレ -->
     <title>あけおめ</title> 
-    <meta name="description" content="あけおめ">
+    <meta name="description" content="Discordウェブマニア公式サーバの祭りの一つ、あけおめ祭の集計結果表示サイトです。">
+    <meta name="robots" content="noindex" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -27,17 +28,18 @@
         <p>当サイトではJavaScriptを使用しています。<br>ブラウザの設定でJavaScriptの使用を無効にしている場合、このサイトは正常に動作しない可能性があります。<br>当サイトをご覧の際はJavaScriptの使用を有効にしてください。</p>
       </div>
     </noscript>
+    <p><a href="./">←選択し直す</a></p>
     <div class="form">
-      <label for="participantSelect">ユーザーネームを選択:</label>
-      <select id="participantSelect" onchange="filterTableAndPlot()">
+      <select id="participantSelect" onchange="filterTableAndPlot() disabled">
         <option value=""></option>
       </select>
       <div id="output"></div>
+      <div id="secondCsvOutput"></div>
       <canvas id="scatterChart" width="400" height="200"></canvas>
       <canvas id="pieChart" width="400" height="200"></canvas> <!-- 円グラフのためのキャンバス -->
-     </div>
-     <p><a href="https://x.com/tanasan_o38">o38</a></p>
+      </div>
+    <p><a href="https://x.com/tanasan_o38">o38</a></p>
     <p id="gasinfo">このサイトではGoogleAnalyticsを使用しております。</p>
-    <script src="script.js"></script>
+    <script src="result.js"></script>
 </body>
 </html>
