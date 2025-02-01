@@ -41,7 +41,7 @@ async function loadCSV() {
         table.appendChild(headerRow);
 
         // データ行の追加と参加者リストの作成
-        const dataRows = rows.slice(0); // 2行目以降をデータとして扱う
+        const dataRows = rows.slice(1); // 2行目以降をデータとして扱う
         dataRows.forEach((row, index) => {
             const tr = document.createElement('tr');
             row.forEach(cell => {
