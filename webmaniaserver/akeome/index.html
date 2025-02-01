@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- ここから -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB2GT0YK96"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RB2GT0YK96');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.ico">
+    <!-- ここまでテンプレ -->
+    <title>あけおめβ</title> 
+    <meta name="description" content="Discordウェブマニア公式サーバの祭りの一つ、あけおめ祭の集計結果表示サイトです。">
+    <meta name="robots" content="noindex" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>あけおめ結果表示</h1>
+    <noscript>
+      <div class="form">
+        <p>当サイトではJavaScriptを使用しています。<br>ブラウザの設定でJavaScriptの使用を無効にしている場合、このサイトは正常に動作しない可能性があります。<br>当サイトをご覧の際はJavaScriptの使用を有効にしてください。</p>
+      </div>
+    </noscript>
+    <div class="form">
+      <label for="participantSelect">ユーザーネームを選択:</label>
+      <select id="participantSelect" onchange="filterTableAndPlot()">
+        <option value=""></option>
+      </select>
+      <div id="output"></div>
+     </div>
+     <p><a href="https://x.com/tanasan_o38">o38</a></p>
+    <p id="gasinfo">このサイトではGoogleAnalyticsを使用しております。</p>
+    <script src="index.js"></script>
+</body>
+</html>
