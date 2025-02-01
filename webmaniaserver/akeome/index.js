@@ -50,9 +50,7 @@ async function loadCSV() {
                 tr.appendChild(td);
             });
 
-            if (index > 0) {
-                participants.add(row[0].trim()); // 1列目（インデックス0）を参加者と仮定
-            }
+             participants.add(row[0].trim()); // 1列目（インデックス0）を参加者と仮定
 
             table.appendChild(tr);
         });
