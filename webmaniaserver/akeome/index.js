@@ -15,7 +15,7 @@ async function loadCSV() {
     const output = document.getElementById('output');
     const select = document.getElementById('participantSelect');
     output.innerHTML = ''; // 初期化
-    select.innerHTML = '<option value="">すべて表示</option>'; // セレクトボックス初期化
+    select.innerHTML = '<option value="">ユーザーネームを選択</option>'; // セレクトボックス初期化
 
     try {
         const response = await fetch(csvUrl);
