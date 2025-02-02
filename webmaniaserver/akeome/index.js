@@ -15,7 +15,7 @@ async function loadCSV() {
     const output = document.getElementById('output');
     const select = document.getElementById('participantSelect');
     output.innerHTML = ''; // 初期化
-    select.innerHTML = '<option value="">ユーザーネームを選択</option>'; // セレクトボックス初期化
+    select.innerHTML = '<option value="">すべて表示</option>'; // セレクトボックス初期化
 
     try {
         const response = await fetch(csvUrl);
@@ -82,39 +82,11 @@ async function loadCSV() {
         // セレクトボックスの変更イベントを設定
         select.addEventListener('change', function() {
             const selectedUser = select.value;
-            if (selectedUser) {
-                window.location.href = `result?user=${encodeURIComponent(selectedUser)}`;
-            } else {
-                filterTableAndPlot(); // すべて表示
-            }
+            window.location.href = `result.html?user=${encodeURIComponent(selectedUser)}`;
         });
 
     } catch (error) {
         output.textContent = `エラー: ${error.message}`;
-    }
-}
-
-// フィルタリングとテーブル作成
-function filterTableAndPlot() {
-    const selectedUser = document.getElementById('participantSelect').value.toLowerCase();
-    const table = document.getElementById('csvTable');
-    const rows = table.getElementsByTagName('tr');
-    filteredData = []; // フィルタリングされたデータを再初期化
-
-    for (let i = 1; i < rows.length; i++) { // ヘッダー行を除く
-        const cells = rows[i].getElementsByTagName('td');
-        const participant = cells[0]?.textContent.toLowerCase(); // 1列目（インデックス0）を参加者と仮定
-        const rank = parseFloat(cells[3]?.textContent); // 4列目（インデックス3）を順位と仮定
-
-        if (!selectedUser || participant === selectedUser) {
-            rows[i].style.display = ''; // 該当行を表示
-
-            if (!isNaN(rank)) {
-                filteredData.push({ participant, rank }); // フィルタリングされたデータも格納
-            }
-        } else {
-            rows[i].style.display = 'none'; // 該当しない行を非表示
-        }
     }
 }
 
